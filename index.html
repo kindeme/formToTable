@@ -5,11 +5,16 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="style.css" />
-		<title>Form Processing</title>
+		<title>Form CRUD Operation</title>
 	</head>
 	<body>
 		<div class="container">
-			<div id="form" class="form">
+			<form
+				id="form"
+				class="form"
+				autocomplete="off"
+				onsubmit="onFormSubmit();"
+			>
 				<label for="fullName">
 					Full Name <span class="required">*</span></label
 				>
@@ -17,7 +22,7 @@
 					type="text"
 					id="fullname"
 					name="fullname"
-					placeholder="Your Name "
+					placeholder="Your Name"
 					required
 				/>
 
@@ -27,15 +32,13 @@
 					id="email"
 					name="email"
 					placeholder="Your Email"
-					required
 				/>
 				<label for="city"> City</label>
 				<input
 					type="text"
 					id="city"
 					name="city"
-					placeholder="Your City "
-					required
+					placeholder="Your City"
 				/>
 				<label for="Country"> Country </label>
 				<input
@@ -43,19 +46,21 @@
 					id="country"
 					name="country"
 					placeholder="Your Country "
-					required
 				/>
 				<input type="submit" value="Submit" id="submit" />
-			</div>
+			</form>
 
 			<table border="1" id="tableContent" class="table">
-				<tr>
-					<th>Full Name</th>
-					<th>Email Id</th>
-					<th>City</th>
-					<th>Country</th>
-					<th></th>
-				</tr>
+				<thead>
+					<tr>
+						<th>Full Name</th>
+						<th>Email Id</th>
+						<th>City</th>
+						<th>Country</th>
+						<th>Actions</th>
+					</tr>
+				</thead>
+				<tbody></tbody>
 			</table>
 
 			<script src="script.js"></script>
