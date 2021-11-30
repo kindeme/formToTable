@@ -1,7 +1,6 @@
 let selectRow = null;
 
-function onFormSubmit(event) {
-	event.preventDefault();
+function onFormSubmit() {
 	let formData = readFormData();
 	// if ((selectRow = null)) {
 	insertNewRecord(formData);
@@ -9,7 +8,6 @@ function onFormSubmit(event) {
 	//updateRecords(formData);
 	resetForm();
 	//}
-	resetForm();
 }
 
 function readFormData() {
